@@ -1,15 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 import DefaultLayout from '../layouts/DefaultLayout';
+import HomePage from '../pages/HomePage';
+import LoginPage from '../pages/LoginPage';
+import SignUpPage from '../pages/SignUpPage';
+import TilDetailPage from '../pages/TilDetailPage';
 
 function Router() {
   return (
     <Routes>
       <Route element={<DefaultLayout />}>
 
-        <Route path="/" element={<div>홈페이지</div>}></Route>
-        <Route path='/tils/:tilId' element={<div>디테일</div>}></Route>
-        <Route path='/auth/sign-up' element={<div>회원가입</div>}></Route>
-        <Route path='/auth/login' element={<div>로그인</div>}></Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path='/tils/:tilId' element={<TilDetailPage />}></Route>
+        <Route path='/auth/sign-up' element={<SignUpPage />}></Route>
+        <Route path='/auth/login' element={<LoginPage />}></Route>
 
       </Route>
     </Routes>
